@@ -53,7 +53,25 @@ export default function TokenView({ id }: TokenViewProps) {
     );
   }
 
-  if (uriError || !uriData) {
+  // A chain that did not answer is not the same claim as a token that was never minted, and
+  // telling someone their piece "does not exist" because an RPC timed out is the worse of the
+  // two mistakes by some margin.
+  if (uriError) {
+    return (
+      <Panel>
+        <div className="space-y-3">
+          <p className="text-sm text-amber-400">
+            Could not reach BOT Chain. Piece #{id.toString()} is unknown, not missing — try again.
+          </p>
+          <Link href="/gallery">
+            <Button variant="ghost">← View Gallery</Button>
+          </Link>
+        </div>
+      </Panel>
+    );
+  }
+
+  if (!uriData) {
     return (
       <Panel>
         <div className="space-y-3">
