@@ -33,6 +33,15 @@ export default function PageShell({ children, nav = [], title, description }: Pa
         style={{ borderBottom: "1px solid var(--border-subtle)" }}
       >
         <Link href="/" className="flex items-baseline gap-3 no-underline">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 100 100"
+            style={{ width: "18px", height: "18px", alignSelf: "center", flexShrink: 0 }}
+          >
+            <path d="M50 10 L86 50 L50 90 L14 50 Z" fill="none" stroke="var(--accent)" strokeWidth="6" />
+            <path d="M50 28 L72 50 L50 72 L28 50 Z" fill="var(--accent)" opacity="0.65" />
+            <circle cx="50" cy="50" r="8" fill="var(--bg-base)" />
+          </svg>
           <span className="text-[16px] font-medium tracking-[0.3em] uppercase">{app.name}</span>
         </Link>
 
