@@ -2,6 +2,24 @@
 
 Generative on-chain SVG NFTs. Nothing off-chain.
 
+### BOT Chain mainnet (677) — live
+
+| | |
+|---|---|
+| Contract | [`0xdFA869d3A17BD7FB79BE237d27959a6EC1213FC3`](https://scan.botchain.ai/address/0xdFA869d3A17BD7FB79BE237d27959a6EC1213FC3) · source verified |
+| Deploy block | 27329512 |
+
+### Bohr testnet (968) — live
+
+| | |
+|---|---|
+| Contract | [`0xdFA869d3A17BD7FB79BE237d27959a6EC1213FC3`](https://scan.bohr.life/address/0xdFA869d3A17BD7FB79BE237d27959a6EC1213FC3) · source verified |
+| Deploy block | 27397310 |
+
+The site targets mainnet.
+
+---
+
 ## What it does
 Kiln mints ERC-721 NFTs with artwork generated entirely on-chain from a deterministic seed. There is no IPFS, no API, no metadata server — the artwork lives directly in the contract forever.
 
