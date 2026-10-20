@@ -6,6 +6,7 @@ import PageShell from "@/components/layout/PageShell";
 import Panel from "@/components/ui/Panel";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
+import PieceGrid from "@/components/kiln/PieceGrid";
 import { NAV } from "@/lib/nav";
 
 export default function GalleryPage() {
@@ -15,9 +16,13 @@ export default function GalleryPage() {
     <PageShell
       nav={NAV}
       title="Kiln Gallery"
-      description="Look up generative on-chain SVG tokens by ID."
+      description="Every piece minted, and the ones this wallet holds."
     >
       <div className="space-y-6">
+        {/* Yours first, then everything minted. Typing a number you already know is the fallback. */}
+        <PieceGrid mineOnly />
+        <PieceGrid />
+
         <Panel>
           <div className="space-y-4 max-w-md">
             <h2 className="text-base font-semibold text-white">Find a Token</h2>
